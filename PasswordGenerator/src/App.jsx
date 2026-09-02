@@ -7,8 +7,31 @@ const [Password, setPassword] = useState("");
 const [NumberAllowed, setNumberAllowed] =useState("False")
   const [CharAllowed, setCharAllowed] =useState("False")
   const [length,setlength] = useState("8")
+  const passwordRef = useRef(null)
 
-  
+  const passwordGenerator = useCallback(()=>{
+    let pass= "";
+    let string = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+    if(NumberAllowed) string += "1234567890"
+    if(CharAllowed) string +="!@#$%^&*-_+=[]{}~`"
+
+    for (let i = 1; i <= length; i++) {
+      let char = Math.floor(Math.random() * string.length + 1)
+      pass += string.charAt(char)}
+      setPassword(pass)
+
+
+  },[length,CharAllowed,NumberAllowed,setPassword])
+
+  const copyPasswordtoClipboard = useCallback(()=>{
+    passwordRef.current?.select();
+    useEffect(() => {
+    passwordGenerator()
+  }, [length, numberAllowed, charAllowed, passwordGenerator])
+  })
+  useEffect(() => {
+    passwordGenerator()
+  }, [length, NumberAllowed, CharAllowed, passwordGenerator])
 
 
   return (
@@ -23,6 +46,7 @@ const [NumberAllowed, setNumberAllowed] =useState("False")
         placeholder='Password'
         className=' bg-gray-50 text-black outline-none w-full py-1 px-3 rounded-lg '
         readOnly
+        ref={passwordRef}
 
            />
       <button className=' outline-none bg-black rounded-lg px-5 py-2 mx-2 '>Copy</button>
