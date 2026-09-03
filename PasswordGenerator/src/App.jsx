@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState, useRef , useEffect } from 'react';
 
 import './App.css'
 
@@ -49,7 +49,9 @@ const [NumberAllowed, setNumberAllowed] =useState("False")
         ref={passwordRef}
 
            />
-      <button className=' outline-none bg-black rounded-lg px-5 py-2 mx-2 '>Copy</button>
+      <button className=' outline-none bg-black rounded-lg px-5 py-2 mx-2 '
+      onClick={copyPasswordtoClipboard}
+      >Copy</button>
       </div>
       <div className='flex text-sm gap-x-4'>
       <div className='flex items-center gap-x-3'>
