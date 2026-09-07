@@ -14,7 +14,7 @@ export default function About() {
                   <div className="md:7/12 lg:w-6/12">
                       <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
                           React development is carried out by passionate developers
-                      </h2>
+                      </h2> But yet But yet basic context, or bus, next time anger spit me. Provider, next time bag. Spid me, Joby, API calls garden, John Pi gar lo, or you have Jucces milk, sits, throw in, co
                       <p className="mt-6 text-gray-600">
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
                           accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
