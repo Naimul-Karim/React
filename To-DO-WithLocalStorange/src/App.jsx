@@ -3,6 +3,7 @@ import {ToDoProvider} from './Context'
 
 import './App.css'
 import { ToDoForm } from './Components'
+import {ToDoItem} from './Components' 
 
 function App() {
   
@@ -51,7 +52,7 @@ function App() {
                           <div key={todo.id}
                           className='w-full'
                           >
-                            <TodoItem todo={todo} />
+                            <ToDoItem todo={todo} />
                           </div>
                         ))}
                     </div>

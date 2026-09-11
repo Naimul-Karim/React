@@ -5,13 +5,13 @@ import {useToDo} from '../Context/ToDoContext'
 function ToDoForm() {
 
     const[todo, setTodo] = useState("")
-    const {addToDo} = useToDo()
+    const {addTodo} = useToDo()
 
     const add =  (e)=>{
         e.preventDefault();
 
         if(!todo) return
-        addToDo({ todo , completed: false})
+        addTodo({ todo , completed: false})
         setTodo("")
     }
     
