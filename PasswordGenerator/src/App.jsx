@@ -14,7 +14,6 @@ const [NumberAllowed, setNumberAllowed] =useState("False")
     let string = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
     if(NumberAllowed) string += "1234567890"
     if(CharAllowed) string +="!@#$%^&*-_+=[]{}~`"
- But yet basic context, or bus, nex But yet basic context, or bus, next time anger spit me. Provider, next time bag. Spid me, Joby, API calls garden, John Pi gar lo, or you have Jucces milk, sits, throw in, coriable state me stor car linge, use in a corea, John, yet we dritt the or sit sida legging value अच्छा, ye to cars, like stor casses case millga. J sex me rete valida, chuch
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * string.length + 1)
       pass += string.charAt(char)}
