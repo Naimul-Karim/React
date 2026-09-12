@@ -10,7 +10,12 @@ function App() {
   const [todos, settodos] = useState([])
 
   const addTodo = (todo)=>{
-    settodos((prev)=> [{id: Date.now(), ...todo},...prev])
+    settodos((prev)=> [{id: Date.now(), ...todo},...prev]
+  )
+    console.log(todo);
+    console.log(todos);
+  
+    
   }
 
   const updateTodo = (id, todo)=>{
@@ -22,7 +27,10 @@ function App() {
   }
 
   const toggleComplete = (id)=>{
-    settodos((prev) => prev.map((prevTodo)=> prevTodo.id ===id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo))
+    settodos((prev) => 
+      prev.map((prevTodo)=> prevTodo.id ===id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo))
+    console.log(id);
+    
   }
 
   useEffect(()=>{

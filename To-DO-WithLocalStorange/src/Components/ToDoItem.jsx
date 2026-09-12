@@ -11,7 +11,7 @@ function ToDoItem({ todo }) {
     setIsTodoEditable(false)
   }
   const toggleCompleted = () => {
-    //console.log(todo.id);
+    // console.log(todo.id);
     toggleComplete(todo.id)
   }
 
@@ -52,7 +52,7 @@ function ToDoItem({ todo }) {
                 }}
                 disabled={todo.completed}
             >
-                {isTodoEditable ? "📁" : "✏️"}
+                {isTodoEditable ? "✔️" : "✏️"}
             </button>
             {/* Delete Todo Button */}
             <button
