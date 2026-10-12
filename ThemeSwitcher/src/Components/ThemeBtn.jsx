@@ -5,7 +5,7 @@ import useTheme from '../Contexta/theme';
 export default function ThemeBtn() {
     const { themeMode , darkTheme , lightTheme} = useTheme()
 
-    const onChangeBtn = (e)=>{
+    const onChangeBtn = ()=>{
         const darkModeStatus = e.currentTarget.checked
         if(darkModeStatus)
             { darkTheme()}

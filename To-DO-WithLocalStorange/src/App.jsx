@@ -39,7 +39,7 @@ function App() {
   if(todos && todos.length > 0){
     settodos(todos)
   } 
-  },[])
+})
 
 
   useEffect(() => {
